@@ -11,7 +11,7 @@ RUN apt-get update \
 		npm \
 		git \
 		build-essential \
-	&& gem install jekyll \
+	&& gem install jekyll bundler \
 	&& npm install -g bower \
 	&& apt-get clean \
 	&& rm -rf /var/lib/apt/lists/* \
