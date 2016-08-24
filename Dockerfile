@@ -14,4 +14,8 @@ RUN apt-get update \
 	&& gem install jekyll \
 	&& npm install -g bower \
 	&& apt-get clean \
-	&& rm -rf /var/lib/apt/lists/*
+	&& rm -rf /var/lib/apt/lists/* \
+	&& ln -s `which nodejs` /usr/bin/node \
+	&& echo '{ "allow_root": true }' > /root/.bowerrc
+
+CMD ["bash"]
